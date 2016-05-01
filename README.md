@@ -46,8 +46,10 @@ end
 ```
 
 #### Hash Description
-__:origin__ => The origin that will send cross script requests to your Rails app. You can pass either a string or a regex.\
-__:methods__ => The allowed methods for a request from an origin. Value can either be *:all* for all methods or an array of allowed methods - *[:get, :post, :delete]*.\
+__:origin__ => The origin that will send cross script requests to your Rails app. You can pass either a string or a regex.
+
+__:methods__ => The allowed methods for a request from an origin. Value can either be *:all* for all methods or an array of allowed methods - *[:get, :post, :delete]*.
+
 _"*"_ => Allows requests from all origins and methods.
 
 __NOTE__: When passing a Regex be sure not to be too inclusive.
@@ -70,10 +72,12 @@ class ApplicationController < ActionController::Base
 2. Change line - `protect_from_forgery...` to `protect_from_forgery with: :exception, if: :block_csr?`
 
 ## Configuration Examples:
-config.allowed_origins = "*"\
-config.allowed_origins = {:origin => 'http://localhost:3000', :methods => :all}\
-config.allowed_origins = {:origin => '127.0.0.1:3000', :methods => :all}, {:origin => 
-'chrome-extension://my_extension_id', :methods => [:get, :post, :put]}\
+config.allowed_origins = "*"
+
+config.allowed_origins = {:origin => 'http://localhost:3000', :methods => :all}
+
+config.allowed_origins = {:origin => '127.0.0.1:3000', :methods => :all}, {:origin => 'chrome-extension://my_extension_id', :methods => [:get, :post, :put]}
+
 config.allowed_origins = {:origin => /chrome-extension:\\/\\/my_extension_id/, :methods => :get}, {:origin => /http:\\/\\/localhost:3000/, :methods => [:post, :put]}
 
 

@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["nishadmenezes@gmail.com"]
   spec.summary       = "Allow Cross Origin AJAX requests from trusted web applications to your Rails Back-End."
   spec.description   = ""
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/nishadmenezes/csr_auth"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
