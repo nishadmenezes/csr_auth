@@ -1,0 +1,5 @@
+Description:
+  Creates an initializer for csr_auth.
+
+Example:
+  `rails generate csr_auth:install`
